@@ -33,3 +33,18 @@
 
 /* FixGo Plus decision and deliverable tools */
 .plus-tool-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:9px}.plus-tool-grid button{border:1px solid #ddd8ff;background:#f8f7ff;border-radius:10px;padding:12px;text-align:left;font-size:12px;color:#5146ad;display:flex;justify-content:space-between;align-items:center}.workspace-card>.btn{margin-top:10px}@media(max-width:700px){.plus-tool-grid{grid-template-columns:1fr}}
+
+/* FixGo journey and reward dashboard */
+.game-stats-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:16px 0 22px}
+.game-stats-grid article{display:flex;flex-direction:column;gap:5px;padding:16px;border:1px solid var(--line,#e8eaf0);border-radius:16px;background:var(--surface,#fff);min-width:0}
+.game-stats-grid article>span{font-size:23px}.game-stats-grid article>b{font-size:19px;letter-spacing:-.3px}.game-stats-grid article>small{font-size:12px;color:var(--muted,#73798a)}
+.weekly-challenge{margin:18px 0;background:linear-gradient(135deg,rgba(255,190,80,.10),rgba(132,102,255,.06))}
+.quest-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:14px 0 24px}
+.quest-grid button{display:flex;flex-direction:column;align-items:flex-start;text-align:left;gap:7px;padding:16px;border:1px solid var(--line,#e8eaf0);border-radius:16px;background:var(--surface,#fff);color:inherit;cursor:pointer;transition:transform .18s,border-color .18s}
+.quest-grid button:hover{transform:translateY(-2px);border-color:var(--accent,#8b79ff)}.quest-grid button>span{font-size:24px}.quest-grid button>b{font-size:14px}.quest-grid button>small{font-size:12px;color:var(--muted,#73798a)}.quest-grid button>strong{font-size:12px;color:var(--accent,#7157db);margin-top:auto}
+.achievement-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:14px 0}
+.achievement-grid article{display:flex;align-items:center;gap:12px;padding:13px;border:1px solid var(--line,#e8eaf0);border-radius:14px;background:var(--surface,#fff);opacity:.62;min-width:0}
+.achievement-grid article.unlocked{opacity:1;border-color:rgba(94,170,130,.38);background:rgba(94,170,130,.07)}.achievement-grid article>span{font-size:25px}.achievement-grid article>div{display:flex;flex:1;min-width:0;flex-direction:column;gap:3px}.achievement-grid article b{font-size:13px}.achievement-grid article small{font-size:11px;color:var(--muted,#73798a)}.achievement-grid article i{font-size:10px;font-style:normal;color:var(--muted,#73798a);white-space:nowrap}.achievement-grid article.unlocked i{color:#238454;font-weight:700}
+.game-note{font-size:12px;color:var(--muted,#73798a);margin:14px 0 24px}
+@media(max-width:850px){.game-stats-grid,.quest-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:520px){.game-stats-grid{gap:8px}.game-stats-grid article{padding:12px}.game-stats-grid article>b{font-size:16px}.quest-grid{gap:8px}.quest-grid button{padding:13px}.achievement-grid{grid-template-columns:1fr}}
