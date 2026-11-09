@@ -37,7 +37,7 @@ const weeklyChallenges=[
  {title:'Plan before booking',question:'Before confirming a booking, what should both people agree on?',options:[['details','The work scope, price and timing'],['password','Account passwords'],['nothing','No details are needed']],answer:'details',explain:'Agree on scope, price and timing before confirming.'}
 ];
 const localDayIndex=()=>{const d=new Date();return Math.floor(new Date(d.getFullYear(),d.getMonth(),d.getDate()).getTime()/86400000)%7};
-const localWeekIndex=()=>{const d=new Date();const jan1=new Date(d.getFullYear(),0,1);return Math.floor((d-jan1)/604800000)%weeklyChallenges.length};
+const localWeekIndex=()=>{const d=new Date();const weekStart=new Date(d.getFullYear(),d.getMonth(),d.getDate());weekStart.setDate(weekStart.getDate()-((weekStart.getDay()+6)%7));const jan1=new Date(d.getFullYear(),0,1);const firstMonday=new Date(jan1);firstMonday.setDate(firstMonday.getDate()-((firstMonday.getDay()+6)%7));return Math.floor((weekStart-firstMonday)/604800000)%weeklyChallenges.length};
 const gameLevels=[
  {min:0,name:'Curious Explorer',emoji:'🌱'}, {min:50,name:'Skill Scout',emoji:'🔎'}, {min:120,name:'Bright Builder',emoji:'🧩'}, {min:220,name:'Creative Spark',emoji:'💡'}, {min:350,name:'Community Mate',emoji:'🤝'}, {min:550,name:'Problem Solver',emoji:'🛠️'}, {min:800,name:'Idea Launcher',emoji:'🚀'}, {min:1100,name:'All-Round Ace',emoji:'🌟'}, {min:1500,name:'Impact Maker',emoji:'🏆'}, {min:2000,name:'FixGo Legend',emoji:'👑'}
 ];
